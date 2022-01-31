@@ -16,4 +16,7 @@
     <string name="button_0">0</string>
     <string name="button_res">=</string>
     <string name="button_div">/</string>
+    <string name="button_clean">C</string>
+    <string name="buttom_percent">%</string>
+    <string name="button_backspace">←</string>
 </resources>

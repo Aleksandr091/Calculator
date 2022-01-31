@@ -6,7 +6,40 @@
     android:background="@drawable/elephant2"
     android:gravity="bottom"
     android:orientation="horizontal">
+    <TableRow
 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_C"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/button_clean"
+            android:textSize="@dimen/button_text_size" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_backspace"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/button_backspace"
+            android:textSize="@dimen/button_text_size" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_percent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/buttom_percent"
+            android:textSize="@dimen/button_text_size" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_div"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/button_div"
+            android:textSize="@dimen/button_text_size" />
+    </TableRow>
     <TableRow
 
         android:layout_width="match_parent"
@@ -134,16 +167,12 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_res"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="@string/button_res"
-            android:textSize="@dimen/button_text_size" />
+            android:textSize="@dimen/button_text_size"
+            android:layout_span="2"/>
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button_div"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/button_div"
-            android:textSize="@dimen/button_text_size" />
+
     </TableRow>
 </TableLayout>
