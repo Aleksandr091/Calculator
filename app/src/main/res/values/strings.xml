@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">calculator</string>
-    <string name="button1">1</string>
+    <string name="button_1">1</string>
     <string name="button_2">2</string>
     <string name="button_3">3</string>
     <string name="button_sum">+</string>
@@ -17,6 +17,6 @@
     <string name="button_res">=</string>
     <string name="button_div">/</string>
     <string name="button_clean">C</string>
-    <string name="buttom_percent">%</string>
+    <string name="button_percent">%</string>
     <string name="button_backspace">←</string>
 </resources>

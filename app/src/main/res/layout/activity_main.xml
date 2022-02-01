@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_column="4"
@@ -11,9 +12,38 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewOut"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/TextSizeView"
+            android:layout_span="4"/>
+    </TableRow>
+    <TableRow
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewIn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_span="4"
+            android:textSize="@dimen/TextSizeView"
+            android:background="@color/white"
+            tools:text="564"
+            android:gravity="end" />
+    </TableRow>
+
+    <TableRow
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button_C"
+            android:id="@+id/button_clean"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/button_clean"
@@ -30,7 +60,7 @@
             android:id="@+id/button_percent"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/buttom_percent"
+            android:text="@string/button_percent"
             android:textSize="@dimen/button_text_size" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -50,7 +80,7 @@
             android:id="@+id/button_1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/button1"
+            android:text="@string/button_1"
             android:textSize="@dimen/button_text_size" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -152,7 +182,7 @@
         android:gravity="center">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button_."
+            android:id="@+id/button_point"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/button_point"
