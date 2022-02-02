@@ -6,6 +6,7 @@
     android:layout_column="4"
     android:background="@drawable/elephant2"
     android:gravity="bottom"
+    android:layout_gravity="end"
     android:orientation="horizontal">
 
     <TableRow
@@ -18,18 +19,19 @@
             android:id="@+id/textViewIn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_span="4"
+
             android:textSize="@dimen/TextSizeView"
             android:background="@color/white"
             tools:text="564"
-            android:gravity="end" />
+            android:layout_span="4"
+            android:gravity="start" />
     </TableRow>
 
     <TableRow
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center">
+        android:gravity="end">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_clean"
@@ -63,7 +65,7 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center">
+        android:gravity="end">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_one"
@@ -98,7 +100,7 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center">
+        android:gravity="end">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_four"
@@ -133,7 +135,7 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center">
+        android:gravity="end">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_seven"
@@ -168,7 +170,7 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center">
+        android:gravity="end">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_point"

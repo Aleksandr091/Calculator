@@ -1,7 +1,9 @@
 package ru.chistov.Calculator;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,16 +12,16 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    Button btn1;
-    Button btn2;
-    Button btn3;
-    Button btn4;
-    Button btn5;
-    Button btn6;
-    Button btn7;
-    Button btn8;
-    Button btn9;
-    Button btn0;
+    Button btn_one;
+    Button btn_two;
+    Button btn_three;
+    Button btn_four;
+    Button btn_five;
+    Button btn_six;
+    Button btn_seven;
+    Button btn_eight;
+    Button btn_nine;
+    Button btn_zero;
     Button btn_sum;
     Button btn_ded;
     Button btn_inc;
@@ -31,20 +33,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btn_clean;
 
     TextView textViewIn;
-    TextView textViewOut;
+
 
 
     private void initView(){
-        btn1=findViewById(R.id.button_1);
-        btn2=findViewById(R.id.button_2);
-        btn3=findViewById(R.id.button_3);
-        btn4=findViewById(R.id.button_4);
-        btn5=findViewById(R.id.button_5);
-        btn6=findViewById(R.id.button_6);
-        btn7=findViewById(R.id.button_7);
-        btn8=findViewById(R.id.button_8);
-        btn9=findViewById(R.id.button_9);
-        btn0=findViewById(R.id.button_0);
+        btn_one=findViewById(R.id.button_one);
+        btn_two=findViewById(R.id.button_two);
+        btn_three=findViewById(R.id.button_three);
+        btn_four=findViewById(R.id.button_four);
+        btn_five=findViewById(R.id.button_five);
+        btn_six=findViewById(R.id.button_six);
+        btn_seven=findViewById(R.id.button_seven);
+        btn_eight=findViewById(R.id.button_eight);
+        btn_nine=findViewById(R.id.button_nine);
+        btn_zero=findViewById(R.id.button_zero);
         btn_sum=findViewById(R.id.button_sum);
         btn_ded=findViewById(R.id.button_ded);
         btn_inc=findViewById(R.id.button_inc);
@@ -56,24 +58,40 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_clean=findViewById(R.id.button_clean);
 
         textViewIn=findViewById(R.id.textViewIn);
-        textViewOut=findViewById(R.id.textViewOut);
 
     }
     private void setListeners(){
-        btn0.setOnClickListener(this);
-        btn1.setOnClickListener(this);
-        btn2.setOnClickListener(this);
-        btn3.setOnClickListener(this);
-        btn4.setOnClickListener(this);
-        btn5.setOnClickListener(this);
-        btn6.setOnClickListener(this);
-        btn7.setOnClickListener(this);
-        btn8.setOnClickListener(this);
-        btn9.setOnClickListener(this);
+        btn_zero.setOnClickListener(this);
+        btn_one.setOnClickListener(this);
+        btn_two.setOnClickListener(this);
+        btn_three.setOnClickListener(this);
+        btn_four.setOnClickListener(this);
+        btn_five.setOnClickListener(this);
+        btn_six.setOnClickListener(this);
+        btn_seven.setOnClickListener(this);
+        btn_eight.setOnClickListener(this);
+        btn_nine.setOnClickListener(this);
         btn_point.setOnClickListener(this);
         btn_clean.setOnClickListener(this);
         btn_backspace.setOnClickListener(this);
+        btn_sum.setOnClickListener(this);
+        btn_ded.setOnClickListener(this);
+        btn_div.setOnClickListener(this);
+        btn_inc.setOnClickListener(this);
+        btn_res.setOnClickListener(this);
 
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("textViewIn",textViewIn.getText().toString());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        textViewIn.setText(savedInstanceState.getString("textViewIn"));
     }
 
     @Override
@@ -87,35 +105,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case(R.id.button_0):
-                textViewIn.append(btn0.getText().toString());
+            case(R.id.button_zero):
+                textViewIn.append(btn_zero.getText().toString());
                 break;
-            case(R.id.button_1):
-                textViewIn.append(btn1.getText().toString());
+            case(R.id.button_one):
+                textViewIn.append(btn_one.getText().toString());
                 break;
-            case(R.id.button_2):
-                textViewIn.append(btn2.getText().toString());
+            case(R.id.button_two):
+                textViewIn.append(btn_two.getText().toString());
                 break;
-            case(R.id.button_3):
-                textViewIn.append(btn3.getText().toString());
+            case(R.id.button_three):
+                textViewIn.append(btn_three.getText().toString());
                 break;
-            case(R.id.button_4):
-                textViewIn.append(btn4.getText().toString());
+            case(R.id.button_four):
+                textViewIn.append(btn_four.getText().toString());
                 break;
-            case(R.id.button_5):
-                textViewIn.append(btn5.getText().toString());
+            case(R.id.button_five):
+                textViewIn.append(btn_five.getText().toString());
                 break;
-            case(R.id.button_6):
-                textViewIn.append(btn6.getText().toString());
+            case(R.id.button_six):
+                textViewIn.append(btn_six.getText().toString());
                 break;
-            case(R.id.button_7):
-                textViewIn.append(btn7.getText().toString());
+            case(R.id.button_seven):
+                textViewIn.append(btn_seven.getText().toString());
                 break;
-            case(R.id.button_8):
-                textViewIn.append(btn8.getText().toString());
+            case(R.id.button_eight):
+                textViewIn.append(btn_eight.getText().toString());
                 break;
-            case(R.id.button_9):
-                textViewIn.append(btn9.getText().toString());
+            case(R.id.button_nine):
+                textViewIn.append(btn_nine.getText().toString());
                 break;
             case(R.id.button_point):
                 textViewIn.append(btn_point.getText().toString());
@@ -125,6 +143,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case(R.id.button_backspace):
                 textViewIn.setText(textViewIn.getText().subSequence(0,textViewIn.length()-1));
+                break;
+            case(R.id.button_sum):
+                textViewIn.append(btn_sum.getText().toString());
+                break;
+            case(R.id.button_ded):
+                textViewIn.append(btn_ded.getText().toString());
+                break;
+            case(R.id.button_inc):
+                textViewIn.append(btn_inc.getText().toString());
+                break;
+            case(R.id.button_div):
+                textViewIn.append(btn_div.getText().toString());
+                break;
+            case(R.id.button_res):
+                double res= Double.parseDouble(textViewIn.getText().toString());
+                textViewIn.setText(""+res);
                 break;
             default:{
 
