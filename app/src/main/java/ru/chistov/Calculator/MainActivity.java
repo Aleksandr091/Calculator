@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Switch;
@@ -33,6 +34,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btn_clean;
 
     TextView textViewIn;
+    Double firstNum=0.0;
+    String action;
+    Double secondNum=0.0;
+    Double res=0.0;
+    boolean isPoint= true;
 
 
 
@@ -136,29 +142,49 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 textViewIn.append(btn_nine.getText().toString());
                 break;
             case(R.id.button_point):
+                if(isPoint==true){
                 textViewIn.append(btn_point.getText().toString());
+                isPoint=false;}
+                else{}
                 break;
             case(R.id.button_clean):
                 textViewIn.setText(null);
+                isPoint=true;
                 break;
             case(R.id.button_backspace):
+                if(!(textViewIn.length()==0)){
                 textViewIn.setText(textViewIn.getText().subSequence(0,textViewIn.length()-1));
+                } else {
+                }
                 break;
             case(R.id.button_sum):
-                textViewIn.append(btn_sum.getText().toString());
+                firstNum=Double.valueOf(textViewIn.getText().toString());
+                textViewIn.setText(null);
+                action="+";
+                isPoint=true;
                 break;
             case(R.id.button_ded):
-                textViewIn.append(btn_ded.getText().toString());
+                firstNum=Double.valueOf(textViewIn.getText().toString());
+                textViewIn.setText(null);
+                action="-";
+                isPoint=true;
                 break;
             case(R.id.button_inc):
-                textViewIn.append(btn_inc.getText().toString());
+                firstNum=Double.valueOf(textViewIn.getText().toString());
+                textViewIn.setText(null);
+                action="*";
+                isPoint=true;
                 break;
             case(R.id.button_div):
-                textViewIn.append(btn_div.getText().toString());
+                firstNum=Double.valueOf(textViewIn.getText().toString());
+                textViewIn.setText(null);
+                action="/";
+                isPoint=true;
                 break;
             case(R.id.button_res):
-                double res= Double.parseDouble(textViewIn.getText().toString());
-                textViewIn.setText(""+res);
+                secondNum=Double.valueOf(textViewIn.getText().toString());
+                result();
+                isPoint=true;
                 break;
             default:{
 
@@ -167,5 +193,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
     }
-
+    public void result(){
+        switch (action){
+            case ("+"):
+                res=firstNum + secondNum;
+                textViewIn.setText(String.format("%s",res));
+                break;
+            case ("-"):
+                res=firstNum - secondNum;
+                textViewIn.setText(String.format("%s",res));
+                break;
+            case ("*"):
+                res=firstNum * secondNum;
+                textViewIn.setText(String.format("%s",res));
+                break;
+            case ("/"):
+                res=firstNum / secondNum;
+                textViewIn.setText(String.format("%s",res));
+                break;
+        }
+    }
 }
