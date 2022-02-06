@@ -13,4 +13,40 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="myStyle">
+        <item name="android:background">@color/white</item>
+    </style>
+    <style name="Theme.myThemeRed" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:navigationBarColor">@color/Red800</item>
+        <item name="colorPrimary">@color/Red200</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/white</item>
+        <item name="colorOnPrimaryContainer">@color/Red300</item>
+        <item name="colorPrimaryInverse">@color/Red400</item>
+        <item name="colorSecondary">@color/Red500</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/white</item>
+        <item name="colorOnSecondaryContainer">@color/Red600</item>
+        <item name="colorTertiary">@color/Red700</item>
+        <item name="colorOnTertiary">@color/white</item>
+        <item name="colorTertiaryContainer">@color/white</item>
+        <item name="colorOnTertiaryContainer">@color/Red800</item>
+    </style>
+    <style name="Theme.myThemeGreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:navigationBarColor">@color/Green800</item>
+        <item name="colorPrimary">@color/Green200</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/white</item>
+        <item name="colorOnPrimaryContainer">@color/Green300</item>
+        <item name="colorPrimaryInverse">@color/Green400</item>
+        <item name="colorSecondary">@color/Green500</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/white</item>
+        <item name="colorOnSecondaryContainer">@color/Green600</item>
+        <item name="colorTertiary">@color/Green700</item>
+        <item name="colorOnTertiary">@color/white</item>
+        <item name="colorTertiaryContainer">@color/white</item>
+        <item name="colorOnTertiaryContainer">@color/Green800</item>
+    </style>
 </resources>
+

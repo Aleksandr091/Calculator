@@ -21,7 +21,7 @@
             android:layout_height="match_parent"
 
             android:textSize="@dimen/TextSizeView"
-            android:background="@color/white"
+            style="@style/myStyle"
             tools:text="564"
             android:layout_span="4"
             android:gravity="start" />
@@ -33,28 +33,28 @@
         android:layout_height="match_parent"
         android:gravity="end">
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_clean"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/button_clean"
             android:textSize="@dimen/button_text_size" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_backspace"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/button_backspace"
             android:textSize="@dimen/button_text_size" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_percent"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/button_percent"
             android:textSize="@dimen/button_text_size" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_div"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -67,28 +67,28 @@
         android:layout_height="match_parent"
         android:gravity="end">
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_one"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/button_1"
             android:textSize="@dimen/button_text_size" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_two"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/button_2"
             android:textSize="@dimen/button_text_size" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_three"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/button_3"
             android:textSize="@dimen/button_text_size" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_sum"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -102,28 +102,28 @@
         android:layout_height="match_parent"
         android:gravity="end">
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_four"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/button_4"
             android:textSize="@dimen/button_text_size" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_five"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/button_5"
             android:textSize="@dimen/button_text_size" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_six"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/button_6"
             android:textSize="@dimen/button_text_size" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_ded"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -137,28 +137,28 @@
         android:layout_height="match_parent"
         android:gravity="end">
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_seven"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/button_7"
             android:textSize="@dimen/button_text_size" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_eight"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/button_8"
             android:textSize="@dimen/button_text_size" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_nine"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/button_9"
             android:textSize="@dimen/button_text_size" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_inc"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -172,21 +172,21 @@
         android:layout_height="match_parent"
         android:gravity="end">
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_point"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/button_point"
             android:textSize="@dimen/button_text_size" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_zero"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/button_0"
             android:textSize="@dimen/button_text_size" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_res"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
