@@ -19,7 +19,9 @@
     <string name="button_clean">C</string>
     <string name="button_percent">%</string>
     <string name="button_backspace">←</string>
-    <string name="themeDefault">themeDefault</string>
-    <string name="themeRed">themeRed</string>
-    <string name="themeGreen">themeGreen</string>
+    <string name="btn_theme_Default">themeDefault</string>
+    <string name="btn_theme_Red">themeRed</string>
+    <string name="btn_theme_Green">themeGreen</string>
+    <string name="btn_text_go_to_set_Theme">go_to_set_Theme</string>
+    <string name="tex_btn_set_theme">set_Theme</string>
 </resources>

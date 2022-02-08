@@ -1,9 +1,12 @@
 package ru.chistov.Calculator;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.view.View;
@@ -32,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btn_percent;
     Button btn_backspace;
     Button btn_clean;
+    Button btn_Theme;
 
     TextView textViewIn;
     Double firstNum=0.0;
@@ -39,7 +43,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Double secondNum=0.0;
     Double res=0.0;
     boolean isPoint= true;
-
 
 
     private void initView(){
@@ -62,6 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_percent=findViewById(R.id.button_percent);
         btn_backspace=findViewById(R.id.button_backspace);
         btn_clean=findViewById(R.id.button_clean);
+        btn_Theme=findViewById(R.id.button_Theme);
 
         textViewIn=findViewById(R.id.textViewIn);
 
@@ -85,6 +89,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_div.setOnClickListener(this);
         btn_inc.setOnClickListener(this);
         btn_res.setOnClickListener(this);
+        btn_Theme.setOnClickListener(this);
 
     }
 
@@ -103,10 +108,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(getAppTheme());
         setContentView(R.layout.activity_main);
         initView();
         setListeners();
     }
+    private static final String Pref = "key_Pref";
+    private static final String Pref_key_theme = "key_Pref_theme";
+
+    protected void setAppTheme(int codeStyle){
+        SharedPreferences sharedPref=getSharedPreferences(Pref,MODE_PRIVATE);
+        SharedPreferences.Editor editor=sharedPref.edit();
+        editor.putInt(Pref_key_theme,codeStyle);
+        editor.apply();
+    }
+    protected int getAppTheme(){
+        SharedPreferences sharedPref=getSharedPreferences(Pref,MODE_PRIVATE);
+        return sharedPref.getInt(Pref_key_theme,R.style.Theme_MyApplication);
+    }
+
 
     @Override
     public void onClick(View view) {
@@ -186,13 +206,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 result();
                 isPoint=true;
                 break;
+            case(R.id.button_Theme):
+                Intent intent=new Intent(MainActivity.this,SecondActivity.class);
+                startActivityForResult(intent,CODE);
+                break;
             default:{
+            }
+        }
+    }
+    public static int CODE = 1;
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode==CODE&&resultCode==RESULT_OK){
+            if(data.getExtras()!=null){
+                setAppTheme(data.getIntExtra(SecondActivity.KEY_INTENT,R.style.Theme_MyApplication));
+                recreate();
 
             }
-
         }
-
     }
+
     public void result(){
         switch (action){
             case ("+"):

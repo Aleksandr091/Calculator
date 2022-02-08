@@ -1,5 +1,6 @@
 package ru.chistov.Calculator;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -10,8 +11,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class SecondActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private static final String Pref ="key_Pref";
-    private static final String Pref_key_theme ="key_Pref_theme";
+    private static final String Pref = "key_Pref";
+    private static final String Pref_key_theme = "key_Pref_theme";
+    public static String KEY_INTENT = "KEY_INTENT";
+
 
     protected void setAppTheme(int codeStyle){
         SharedPreferences sharedPref=getSharedPreferences(Pref,MODE_PRIVATE);
@@ -28,9 +31,15 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setTheme(getAppTheme());
         setContentView(R.layout.activity_second);
+
+        setListeners();
+
+    }
+    private void setListeners(){
         ((RadioButton) findViewById(R.id.radioBtnThemeDefault)).setOnClickListener(this);
         ((RadioButton) findViewById(R.id.radioBtnThemeRed)).setOnClickListener(this);
         ((RadioButton) findViewById(R.id.radioBtnThemeGreen)).setOnClickListener(this);
+        findViewById(R.id.button_Theme).setOnClickListener(this);
     }
 
 
@@ -46,8 +55,15 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
             case (R.id.radioBtnThemeGreen):
                 setAppTheme(R.style.Theme_myThemeGreen);
                 break;
+            case (R.id.button_Theme):
+                Intent intent = new Intent();
+                intent.putExtra(KEY_INTENT,getAppTheme());
+                SecondActivity.this.setResult(RESULT_OK,intent);
+                finish();
+                break;
         }
         recreate();
 
     }
+
 }
